@@ -142,8 +142,14 @@ html {
   margin: 0 auto;
   font-size: 1.6rem;
 }
+@media (max-width: 550px) {
+  body {
+    max-width: 550px;
+  }
+}
 header {
-  width: 90%;
+  width: 100%;
+  padding: 15px;
 }
 header nav {
   display: flex;
@@ -153,9 +159,14 @@ header nav {
 header a {
   padding: 15px;
 }
+@media (max-width: 550px) {
+  header {
+    max-width: 550px;
+  }
+}
 .intro {
   background-color: #B8BBD0;
-  width: 90%;
+  width: 100%;
   padding: 15px;
 }
 .intro img {
@@ -173,14 +184,37 @@ header a {
 }
 .skills {
   background-color: #D4D4D4;
-  width: 90%;
+  width: 100%;
   padding: 15px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 .skills .skills-description {
-  width: 40%;
+  /* order: 1px solid black; */
+  width: 30%;
 }
 .skills .skills-list {
-  width: 40%;
+  /* width: 30%; */
+  /* border: 1px solid black; */
+}
+.skills .skills-list .skill-box {
+  border: 1px solid black;
+}
+.skills .skills-list .skill-box p {
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+.experience {
+  background-color: #B8BBD0;
+  width: 100%;
+  padding: 15px;
+}
+.experience h2 {
+  border-bottom: 1px solid black;
+}
+.experience .expHead {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 15px;
 }

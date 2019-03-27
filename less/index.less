@@ -52,12 +52,22 @@ table {
 
 // mixins
 
+.width-and-pad () {
+	width: 100%;
+	padding: 15px;
+}
+
 .width90 (){
 	width: 90%
 }
 
 .padding15() {
 	padding: 15px;
+}
+
+.flexer () {
+	display: flex;
+	justify-content: flex-start;
 }
 
 //<-------------end mixins
@@ -67,7 +77,7 @@ table {
 @silver-blue: #B8BBD0;
 @silver: #D4D4D4;
 
-
+//<-----variables end 
 
 * {
     box-sizing: border-box;
@@ -84,11 +94,17 @@ html {
 .container {
 	max-width: 960px;
 	margin: 0 auto;
-	font-size: 1.6rem
+	font-size: 1.6rem	
+}
+
+body {
+	@media(max-width: 550px){
+		max-width: 550px;
+	}
 }
 
 header {
-	.width90;
+	.width-and-pad;
 
 	nav {
 		display: flex;
@@ -99,12 +115,15 @@ header {
 	a {
 		.padding15;
 	}
+
+	@media(max-width: 550px){
+		max-width: 550px;
+	}
 }
 
 .intro {
 	background-color: @silver-blue;
-	.width90;
-	.padding15;
+	.width-and-pad;
 
 	img {
 		width: 50%;
@@ -126,24 +145,25 @@ header {
 
 .skills {
 	background-color: @silver;
-	.width90;
-	.padding15;
+	.width-and-pad;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 
 	.skills-description {
-		border: 1px solid black;
-		width: 50%
+		/* order: 1px solid black; */
+		width: 30%
 	}
 
 	.skills-list {
 		
-		width: 50%
-
+		/* width: 30%; */
+		/* border: 1px solid black; */
+	
 		.skill-box {
 			border: 1px solid black;
 		
 			p {
+				padding: 10px;
 				border-bottom: 1px solid black;
 			}
 		}
@@ -151,3 +171,15 @@ header {
 	}
 }
 
+.experience {
+	background-color: @silver-blue;
+	.width-and-pad;
+		h2 {
+			border-bottom: 1px solid black;
+		}
+
+		.expHead {
+			.flexer;
+			.width-and-pad;
+		}
+}
