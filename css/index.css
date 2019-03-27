@@ -142,9 +142,12 @@ html {
   margin: 0 auto;
   font-size: 1.6rem;
 }
-@media (max-width: 550px) {
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+@media (max-width: 500px) {
   body {
-    max-width: 550px;
+    max-width: 500px;
   }
 }
 header {
@@ -158,11 +161,6 @@ header nav {
 }
 header a {
   padding: 15px;
-}
-@media (max-width: 550px) {
-  header {
-    max-width: 550px;
-  }
 }
 .intro {
   background-color: #B8BBD0;
@@ -182,6 +180,11 @@ header a {
 .intro p {
   padding: 15px;
 }
+.intro button {
+  margin-left: 10px;
+  background-color: white(250, 250, 250);
+  width: 100px;
+}
 .skills {
   background-color: #D4D4D4;
   width: 100%;
@@ -189,13 +192,12 @@ header a {
   display: flex;
   justify-content: space-evenly;
 }
-.skills .skills-description {
-  /* order: 1px solid black; */
-  width: 30%;
+.skills h2 {
+  padding: 15px;
+  font-weight: bolder;
 }
-.skills .skills-list {
-  /* width: 30%; */
-  /* border: 1px solid black; */
+.skills .skills-description {
+  width: 30%;
 }
 .skills .skills-list .skill-box {
   border: 1px solid black;
@@ -208,13 +210,43 @@ header a {
   background-color: #B8BBD0;
   width: 100%;
   padding: 15px;
+  /* .expHead {
+			.flexer;
+			.width-and-pad;
+			font-weight: bolder;
+			background-color: @silver;
+		}
+
+		.exp1 {
+			.flexer;
+			.width-and-pad;
+			background-color: @silver-blue
+		}
+
+		.exp2 {
+			.flexer;
+			.width-and-pad;
+			background-color: @silver;
+		} */
 }
 .experience h2 {
-  border-bottom: 1px solid black;
-}
-.experience .expHead {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
+  font-weight: bolder;
   padding: 15px;
+}
+.experience table {
+  border: 1px solid black;
+  padding: 15px;
+}
+.experience table th {
+  font-weight: bolder;
+}
+.experience table th,
+.experience table td {
+  padding: 15px;
+}
+footer {
+  padding: 15px;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #B8BBD0;
 }
