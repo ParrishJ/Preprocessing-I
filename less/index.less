@@ -49,6 +49,24 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+// mixins
+
+.width90 (){
+	width: 90%
+}
+
+.padding15 {
+	padding: 15px;
+}
+
+//<-------------end mixins
+
+//variables
+
+
+
+
 * {
     box-sizing: border-box;
 }
@@ -57,7 +75,52 @@ html, body {
     height: 100%;
 }
 
-body {
-	background-color: red;
+html {
+	font-size: 62.5%;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	font-size: 1.6rem
+}
+
+header {
+	.width90;
+
+	nav {
+		display: flex;
+		justify-content: flex-end;
+		.padding15;
+	}
+
+	a {
+		.padding15;
+	}
+}
+
+.intro {
+	background-color: aliceblue;
+	.width90;
+	.padding15;
+
+	img {
+		width: 50%;
+		height: auto;
+	}
+
+	h1{
+		.padding15;
+	}
+
+	h2{
+		.padding15;
+	}
+
+	p {
+		.padding15;
+	}
+
+	
 }
 

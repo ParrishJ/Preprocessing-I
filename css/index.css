@@ -127,6 +127,9 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
+.padding15 {
+  padding: 15px;
+}
 * {
   box-sizing: border-box;
 }
@@ -134,6 +137,40 @@ html,
 body {
   height: 100%;
 }
-body {
-  background-color: red;
+html {
+  font-size: 62.5%;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+header {
+  width: 90%;
+}
+header nav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
+header a {
+  padding: 15px;
+}
+.intro {
+  background-color: aliceblue;
+  width: 90%;
+  padding: 15px;
+}
+.intro img {
+  width: 50%;
+  height: auto;
+}
+.intro h1 {
+  padding: 15px;
+}
+.intro h2 {
+  padding: 15px;
+}
+.intro p {
+  padding: 15px;
 }
