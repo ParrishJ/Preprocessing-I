@@ -133,6 +133,8 @@ header {
 
 	h1{
 		.padding15;
+		font-weight: bolder;
+		font-size: 3rem;
 	}
 
 	h2{
@@ -162,8 +164,13 @@ header {
 		font-weight: bolder;
 	}
 
+
 	.skills-description {
-		width: 30%
+		width: 30%;
+
+		@media (max-width: 500px){
+			width: 100%;
+		}
 	}
 
 	.skills-list {
@@ -178,6 +185,12 @@ header {
 		}
 
 	}
+
+	@media (max-width: 500px){
+		display: flex;
+		flex-direction: column;
+	}
+
 }
 
 .experience {
@@ -187,25 +200,6 @@ header {
 			font-weight: bolder;
 			.padding15();
 		}
-
-		/* .expHead {
-			.flexer;
-			.width-and-pad;
-			font-weight: bolder;
-			background-color: @silver;
-		}
-
-		.exp1 {
-			.flexer;
-			.width-and-pad;
-			background-color: @silver-blue
-		}
-
-		.exp2 {
-			.flexer;
-			.width-and-pad;
-			background-color: @silver;
-		} */
 
 		table {
 			border: 1px solid black;

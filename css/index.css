@@ -173,6 +173,8 @@ header a {
 }
 .intro h1 {
   padding: 15px;
+  font-weight: bolder;
+  font-size: 3rem;
 }
 .intro h2 {
   padding: 15px;
@@ -199,6 +201,11 @@ header a {
 .skills .skills-description {
   width: 30%;
 }
+@media (max-width: 500px) {
+  .skills .skills-description {
+    width: 100%;
+  }
+}
 .skills .skills-list .skill-box {
   border: 1px solid black;
 }
@@ -206,28 +213,16 @@ header a {
   padding: 10px;
   border-bottom: 1px solid black;
 }
+@media (max-width: 500px) {
+  .skills {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .experience {
   background-color: #B8BBD0;
   width: 100%;
   padding: 15px;
-  /* .expHead {
-			.flexer;
-			.width-and-pad;
-			font-weight: bolder;
-			background-color: @silver;
-		}
-
-		.exp1 {
-			.flexer;
-			.width-and-pad;
-			background-color: @silver-blue
-		}
-
-		.exp2 {
-			.flexer;
-			.width-and-pad;
-			background-color: @silver;
-		} */
 }
 .experience h2 {
   font-weight: bolder;
