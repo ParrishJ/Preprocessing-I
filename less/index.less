@@ -56,7 +56,7 @@ table {
 	width: 90%
 }
 
-.padding15 {
+.padding15() {
 	padding: 15px;
 }
 
@@ -64,6 +64,8 @@ table {
 
 //variables
 
+@silver-blue: #B8BBD0;
+@silver: #D4D4D4;
 
 
 
@@ -100,7 +102,7 @@ header {
 }
 
 .intro {
-	background-color: aliceblue;
+	background-color: @silver-blue;
 	.width90;
 	.padding15;
 
@@ -120,7 +122,32 @@ header {
 	p {
 		.padding15;
 	}
+}
 
-	
+.skills {
+	background-color: @silver;
+	.width90;
+	.padding15;
+	display: flex;
+	justify-content: space-around;
+
+	.skills-description {
+		border: 1px solid black;
+		width: 50%
+	}
+
+	.skills-list {
+		
+		width: 50%
+
+		.skill-box {
+			border: 1px solid black;
+		
+			p {
+				border-bottom: 1px solid black;
+			}
+		}
+
+	}
 }
 

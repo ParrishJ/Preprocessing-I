@@ -127,9 +127,6 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
-.padding15 {
-  padding: 15px;
-}
 * {
   box-sizing: border-box;
 }
@@ -157,7 +154,7 @@ header a {
   padding: 15px;
 }
 .intro {
-  background-color: aliceblue;
+  background-color: #B8BBD0;
   width: 90%;
   padding: 15px;
 }
@@ -173,4 +170,17 @@ header a {
 }
 .intro p {
   padding: 15px;
+}
+.skills {
+  background-color: #D4D4D4;
+  width: 90%;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+.skills .skills-description {
+  width: 40%;
+}
+.skills .skills-list {
+  width: 40%;
 }
