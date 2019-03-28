@@ -49,6 +49,38 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+
+// mixins
+
+.width-and-pad () {
+	width: 100%;
+	padding: 15px;
+}
+
+.width90 (){
+	width: 90%
+}
+
+.padding15() {
+	padding: 15px;
+}
+
+.flexer () {
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+
+//<-------------end mixins
+
+//variables
+
+@silver-blue: #B8BBD0;
+@silver: #D4D4D4;
+@resumeFont: 'Montserrat', sans-serif;
+
+//<-----variables end 
+
 * {
     box-sizing: border-box;
 }
@@ -57,3 +89,135 @@ html, body {
     height: 100%;
 }
 
+html {
+	font-size: 62.5%;
+}
+
+.container {
+	max-width: 960px;
+	margin: 0 auto;
+	font-size: 1.6rem	
+}
+
+body {
+	@media(max-width: 500px){
+		max-width: 500px;
+	}
+
+	font-family: @resumeFont;
+}
+
+header {
+	.width-and-pad;
+
+	nav {
+		display: flex;
+		justify-content: flex-end;
+		.padding15;
+	}
+
+	a {
+		.padding15;
+	}
+
+}
+
+.intro {
+	background-color: @silver-blue;
+	.width-and-pad;
+
+	img {
+		width: 50%;
+		height: auto;
+	}
+
+	h1{
+		.padding15;
+		font-weight: bolder;
+		font-size: 3rem;
+	}
+
+	h2{
+		.padding15;
+	}
+
+	p {
+		.padding15;
+	}
+
+	button {
+		margin-left: 10px;
+
+		background-color: white(250, 250, 250);
+		width: 100px;
+	}
+}
+
+.skills {
+	background-color: @silver;
+	.width-and-pad;
+	display: flex;
+	justify-content: space-evenly;
+
+	h2 {
+		.padding15;
+		font-weight: bolder;
+	}
+
+
+	.skills-description {
+		width: 30%;
+
+		@media (max-width: 500px){
+			width: 100%;
+		}
+	}
+
+	.skills-list {
+		
+		.skill-box {
+			border: 1px solid black;
+		
+			p {
+				padding: 10px;
+				border-bottom: 1px solid black;
+			}
+		}
+
+	}
+
+	@media (max-width: 500px){
+		display: flex;
+		flex-direction: column;
+	}
+
+}
+
+.experience {
+	background-color: @silver-blue;
+	.width-and-pad;
+		h2 {
+			font-weight: bolder;
+			.padding15();
+		}
+
+		table {
+			border: 1px solid black;
+			.padding15();
+			
+			th {
+				font-weight: bolder;
+			}
+
+			th, td {
+				.padding15();
+			}
+		}
+}
+
+footer{
+	.padding15();
+	.flexer;
+	background-color: @silver-blue;
+
+}
